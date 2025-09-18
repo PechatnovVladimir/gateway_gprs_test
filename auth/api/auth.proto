@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package github.com.PechatnovVladimir.gateway_gprs_test.auth;
+
+option go_package = "github.com/PechatnovVladimir/gateway_gprs_test/auth/api;auth";
+
+service AuthService {
+  rpc Login (LoginRequest) returns (LoginResponse) {};
+}
+
+message LoginRequest {
+  string email = 1;
+  string password =2;
+}
+
+message LoginResponse {
+  string user_id = 3;
+}
+
+

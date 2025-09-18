@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build:
+      context: .
+      dockerfile: auth/Dockerfile
+    container_name: auth-service
+    ports:
+      - "50051:50051"
+    networks:
+      - msa-network
+    restart: unless-stopped
+    environment:
+      - GRPC_PORT=50051
+
+networks:
+  msa-network:
+    driver: bridge
