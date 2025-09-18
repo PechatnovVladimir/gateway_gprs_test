@@ -44,6 +44,8 @@ PKG_PROTO_PATH := $(CURDIR)/pkg
 	find $(VENDOR_PROTO_PATH)/googleapis/google/api -maxdepth 1 -type f -exec mv {} $(VENDOR_PROTO_PATH)/google/api \;
 	rm -rf $(VENDOR_PROTO_PATH)/googleapis
 
+.ver-commit:
+	go list -m -f '{{.Version}}'
 
 generate: .protoc-generate
 
