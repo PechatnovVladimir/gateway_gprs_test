@@ -2,7 +2,7 @@ package gateway
 
 import (
 	"context"
-	authPB "github.com/PechatnovVladimir/gateway_gprs_test/auth/pkg/api"
+	authPB "github.com/PechatnovVladimir/gateway_gprs_test/auth"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
