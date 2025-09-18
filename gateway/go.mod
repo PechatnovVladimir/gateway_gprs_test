@@ -8,6 +8,8 @@ require (
 	github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250918140448-1f9f0d0575b3
 )
 
+//replace github.com/PechatnovVladimir/gateway_gprs_test/auth => ../auth
+
 require (
 	golang.org/x/net v0.44.0 // indirect
 	golang.org/x/sys v0.36.0 // indirect

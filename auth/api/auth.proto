@@ -4,8 +4,14 @@ package github.com.PechatnovVladimir.gateway_gprs_test.auth;
 
 option go_package = "github.com/PechatnovVladimir/gateway_gprs_test/auth/api;auth";
 
+import "google/api/annotations.proto";
+
 service AuthService {
-  rpc Login (LoginRequest) returns (LoginResponse) {};
+  rpc Login (LoginRequest) returns (LoginResponse) {
+    option (google.api.http) = {
+      get: "/v1/login"
+    };
+  };
 }
 
 message LoginRequest {
