@@ -5,7 +5,6 @@ go 1.25.1
 require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.2
 	google.golang.org/grpc v1.75.1
-	github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0
 )
 
 require (
