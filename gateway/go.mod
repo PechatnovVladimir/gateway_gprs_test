@@ -3,12 +3,12 @@ module github.com/PechatnovVladimir/gateway_gprs_test/gateway
 go 1.25.1
 
 require (
-	github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250918140448-1f9f0d0575b3
+	github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250919070234-2e5e733c6b0a
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.2
 	google.golang.org/grpc v1.75.1
 )
 
-replace github.com/PechatnovVladimir/gateway_gprs_test/auth => ../auth
+//replace github.com/PechatnovVladimir/gateway_gprs_test/auth => ../auth
 
 require (
 	golang.org/x/net v0.44.0 // indirect

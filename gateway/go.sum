@@ -1,5 +1,5 @@
-github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250918140448-1f9f0d0575b3 h1:axZjtJvAwIL1dq4GfnX+fOxYNkWTDNiloGbnXQo65JE=
-github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250918140448-1f9f0d0575b3/go.mod h1:GaU2sWp04CbMpGZ8EGuN/QI/S8daAWgrlWWDVxriEEk=
+github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250919070234-2e5e733c6b0a h1:ZtPWqPX4xRiU7hvQdXGgs/3eS//goBZ38gawGXcbbQ0=
+github.com/PechatnovVladimir/gateway_gprs_test/auth v0.0.0-20250919070234-2e5e733c6b0a/go.mod h1:GaU2sWp04CbMpGZ8EGuN/QI/S8daAWgrlWWDVxriEEk=
 github.com/go-logr/logr v1.4.3 h1:CjnDlHq8ikf6E492q6eKboGOC0T8CDaOvkHCIg8idEI=
 github.com/go-logr/logr v1.4.3/go.mod h1:9T104GzyrTigFIr8wt5mBrctHMim0Nb2HLGrmQ40KvY=
 github.com/go-logr/stdr v1.2.2 h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=

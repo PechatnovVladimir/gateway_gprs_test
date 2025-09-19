@@ -17,7 +17,7 @@ func RunRest() {
 	defer cancel()
 	mux := runtime.NewServeMux()
 	opts := []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())}
-	err := authPB.RegisterAuthServiceHandlerFromEndpoint(ctx, mux, "localhost:50051", opts)
+	err := authPB.RegisterAuthServiceHandlerFromEndpoint(ctx, mux, "auth-service:50051", opts)
 	if err != nil {
 		panic(err)
 	}

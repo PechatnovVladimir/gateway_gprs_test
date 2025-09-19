@@ -45,7 +45,7 @@ PKG_PROTO_PATH := $(CURDIR)/pkg
 	rm -rf $(VENDOR_PROTO_PATH)/googleapis
 
 .ver-commit:
-	go list -m -f '{{.Version}}'
+	go list -m -f '{{.Version}}' github.com/PechatnovVladimir/gateway_gprs_test/auth@hw1
 
 generate: .protoc-generate
 
