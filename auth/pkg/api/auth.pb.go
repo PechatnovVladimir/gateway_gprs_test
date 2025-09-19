@@ -24,8 +24,7 @@ const (
 
 type LoginRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Email         string                 `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
-	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
+	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -60,23 +59,16 @@ func (*LoginRequest) Descriptor() ([]byte, []int) {
 	return file_api_auth_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *LoginRequest) GetEmail() string {
+func (x *LoginRequest) GetName() string {
 	if x != nil {
-		return x.Email
-	}
-	return ""
-}
-
-func (x *LoginRequest) GetPassword() string {
-	if x != nil {
-		return x.Password
+		return x.Name
 	}
 	return ""
 }
 
 type LoginResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	UserId        string                 `protobuf:"bytes,3,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Message       string                 `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -111,9 +103,9 @@ func (*LoginResponse) Descriptor() ([]byte, []int) {
 	return file_api_auth_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *LoginResponse) GetUserId() string {
+func (x *LoginResponse) GetMessage() string {
 	if x != nil {
-		return x.UserId
+		return x.Message
 	}
 	return ""
 }
@@ -122,14 +114,13 @@ var File_api_auth_proto protoreflect.FileDescriptor
 
 const file_api_auth_proto_rawDesc = "" +
 	"\n" +
-	"\x0eapi/auth.proto\x123github.com.PechatnovVladimir.gateway_gprs_test.auth\x1a\x1cgoogle/api/annotations.proto\"@\n" +
-	"\fLoginRequest\x12\x14\n" +
-	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\"(\n" +
-	"\rLoginResponse\x12\x17\n" +
-	"\auser_id\x18\x03 \x01(\tR\x06userId2\xb1\x01\n" +
-	"\vAuthService\x12\xa1\x01\n" +
-	"\x05Login\x12A.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginRequest\x1aB.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginResponse\"\x11\x82\xd3\xe4\x93\x02\v\x12\t/v1/loginB>Z<github.com/PechatnovVladimir/gateway_gprs_test/auth/api;authb\x06proto3"
+	"\x0eapi/auth.proto\x123github.com.PechatnovVladimir.gateway_gprs_test.auth\x1a\x1cgoogle/api/annotations.proto\"\"\n" +
+	"\fLoginRequest\x12\x12\n" +
+	"\x04name\x18\x01 \x01(\tR\x04name\")\n" +
+	"\rLoginResponse\x12\x18\n" +
+	"\amessage\x18\x01 \x01(\tR\amessage2\xb8\x01\n" +
+	"\vAuthService\x12\xa8\x01\n" +
+	"\x05Login\x12A.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginRequest\x1aB.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/login/{name}B>Z<github.com/PechatnovVladimir/gateway_gprs_test/auth/api;authb\x06proto3"
 
 var (
 	file_api_auth_proto_rawDescOnce sync.Once

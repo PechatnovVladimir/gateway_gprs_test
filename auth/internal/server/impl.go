@@ -16,5 +16,5 @@ func NewAuthService() *AuthService {
 
 func (s *AuthService) Login(ctx context.Context, req *auth.LoginRequest) (*auth.LoginResponse, error) {
 	log.Println("нас вызвали")
-	return &auth.LoginResponse{UserId: "789789"}, nil
+	return &auth.LoginResponse{Message: "Hello " + req.Name}, nil
 }

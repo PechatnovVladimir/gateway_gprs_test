@@ -10,24 +10,19 @@ import (
 	"net/http"
 )
 
-func Run() error {
+func RunRest() {
+
 	ctx := context.Background()
 	ctx, cancel := context.WithCancel(ctx)
 	defer cancel()
 	mux := runtime.NewServeMux()
-
 	opts := []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())}
-
-	err := authPB.RegisterAuthServiceHandlerFromEndpoint(ctx, mux, "auth-service:50051", opts)
+	err := authPB.RegisterAuthServiceHandlerFromEndpoint(ctx, mux, "localhost:50051", opts)
 	if err != nil {
-		return err
+		panic(err)
 	}
-
-	mainMux := http.NewServeMux()
-	mainMux.Handle("/", mux)
-
-	port := "8080"
-	log.Printf("api-gateway listening on :%s", port)
-	return http.ListenAndServe(":"+port, mainMux)
-
+	log.Printf("server listening at 8080")
+	if err := http.ListenAndServe(":8080", mux); err != nil {
+		panic(err)
+	}
 }

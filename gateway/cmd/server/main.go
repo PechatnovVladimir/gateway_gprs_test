@@ -1,13 +1,15 @@
 package main
 
 import (
-	"github.com/PechatnovVladimir/gateway_gprs_test/gateway/internal/gateway"
+	g "github.com/PechatnovVladimir/gateway_gprs_test/gateway/internal/gateway"
 	"log"
 )
 
 func main() {
-	if err := gateway.Run(); err != nil {
-		log.Fatal(err)
-	}
+	log.Println("starting gateway...")
+	go g.RunRest()
 
+	for {
+		_ = 1
+	}
 }
