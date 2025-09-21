@@ -22,6 +22,9 @@ PKG_PROTO_PATH := $(CURDIR)/pkg
 	--grpc-gateway_out=$(PKG_PROTO_PATH) --grpc-gateway_opt paths=source_relative --grpc-gateway_opt generate_unbound_methods=true \
 	$(PROTO_PATH)/auth.proto
 
+	protoc -I $(VENDOR_PROTO_PATH) --proto_path=$(CURDIR) \
+	--openapiv2_out=../gateway/swagger --openapiv2_opt logtostderr=true \
+	$(PROTO_PATH)/auth.proto
 
 .vendor-protoc-gen-openapiv2:
 	git clone -b main --single-branch -n --depth=1 --filter=tree:0 \

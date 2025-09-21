@@ -7,6 +7,7 @@
 package auth
 
 import (
+	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -114,13 +115,14 @@ var File_api_auth_proto protoreflect.FileDescriptor
 
 const file_api_auth_proto_rawDesc = "" +
 	"\n" +
-	"\x0eapi/auth.proto\x123github.com.PechatnovVladimir.gateway_gprs_test.auth\x1a\x1cgoogle/api/annotations.proto\"\"\n" +
+	"\x0eapi/auth.proto\x123github.com.PechatnovVladimir.gateway_gprs_test.auth\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"\"\n" +
 	"\fLoginRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\")\n" +
 	"\rLoginResponse\x12\x18\n" +
 	"\amessage\x18\x01 \x01(\tR\amessage2\xb8\x01\n" +
 	"\vAuthService\x12\xa8\x01\n" +
-	"\x05Login\x12A.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginRequest\x1aB.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/login/{name}B>Z<github.com/PechatnovVladimir/gateway_gprs_test/auth/api;authb\x06proto3"
+	"\x05Login\x12A.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginRequest\x1aB.github.com.PechatnovVladimir.gateway_gprs_test.auth.LoginResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/login/{name}Bx\x92A7\x122\n" +
+	"\bAuth API\x12!API для авторизации2\x031.0*\x01\x01Z<github.com/PechatnovVladimir/gateway_gprs_test/auth/api;authb\x06proto3"
 
 var (
 	file_api_auth_proto_rawDescOnce sync.Once

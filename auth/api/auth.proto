@@ -5,6 +5,16 @@ package github.com.PechatnovVladimir.gateway_gprs_test.auth;
 option go_package = "github.com/PechatnovVladimir/gateway_gprs_test/auth/api;auth";
 
 import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "Auth API";
+    version: "1.0";
+    description: "API для авторизации";
+  };
+  schemes: HTTP;
+};
 
 service AuthService {
   rpc Login (LoginRequest) returns (LoginResponse) {
